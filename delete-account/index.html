@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Your Account and Data - Mewati Song Player</title>
+  <style>
+    :root { --bg: #ffffff; --fg: #1d2420; --muted: #5b665f; --accent: #2e7d32; --line: #e2e8e4; --danger: #c62828; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121614; --fg: #e8eeea; --muted: #a2afa7; --accent: #81c784; --line: #2a332e; --danger: #ef9a9a; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 56px; }
+    h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+    p, li { margin: 8px 0; }
+    ul, ol { padding-left: 22px; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); margin: 0; }
+    .btn { display: inline-block; margin: 8px 0; padding: 12px 18px; border-radius: 10px;
+           background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; }
+    @media (prefers-color-scheme: dark) { .btn { color: #0d1410; } }
+    .warn { color: var(--danger); font-weight: 600; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,0.1); }
+    .wrap { overflow-x: auto; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+<main>
+
+<h1>Delete Your Account and Data</h1>
+<p class="meta"><strong>Mewati Song Player</strong></p>
+<p class="meta">Last Updated: 5 October 2026</p>
+
+<p>This page explains how to delete your account and data from <strong>Mewati Song Player</strong> (Android app, package <code>com.mewatisongplayer.app</code>). See also our <a href="../">Privacy Policy</a>.</p>
+
+<h2>1. Singers: delete your account inside the App</h2>
+<p>If you registered as a singer, you can delete your account yourself, instantly, without contacting us:</p>
+<ol>
+  <li>Open the Mewati Song Player app and go to <strong>Singer Profile</strong>, then log in.</li>
+  <li>Tap <strong>खाता हटाएं (Delete account)</strong>.</li>
+  <li>Read the warning and enter your 6-digit PIN to confirm.</li>
+</ol>
+<p class="warn">This cannot be undone.</p>
+
+<p><strong>If you cannot log in</strong> (for example you forgot your PIN or no longer have the app), email us using the button in Section 3 from the request below, and include the mobile number you registered with. We will verify and delete the account for you.</p>
+
+<h2>2. Listeners: delete the data linked to your phone</h2>
+<p>If you only listen to songs, the App has no login. Your likes, favorites and listening records are linked to a random anonymous device ID, so we cannot find them by name. You can also ask us to delete a Custom Song Request or feedback you sent. Email us using the button in Section 3 and tell us what you want deleted. For a Custom Song Request, include the mobile number you used. We may ask for a few extra details to locate your records.</p>
+<p>Uninstalling the App removes the device ID from your phone, but it does not delete the records already saved on our servers. Send us a request if you want those removed.</p>
+
+<h2>3. Send a deletion request by email</h2>
+<p>
+  <a class="btn" href="mailto:mewatisongplayer@gmail.com?subject=Delete%20my%20data%20-%20Mewati%20Song%20Player&amp;body=Please%20delete%20my%20data.%0A%0AI%20am%20a%3A%20(singer%20%2F%20listener)%0AMobile%20number%20used%20in%20the%20app%3A%20%0AWhat%20to%20delete%3A%20(account%20%2F%20custom%20song%20request%20%2F%20feedback%20%2F%20everything)%0A">Email a deletion request</a>
+</p>
+<p>Or write to <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>. We aim to reply within 30 days.</p>
+
+<h2>4. What is deleted and what is kept</h2>
+<div class="wrap">
+<table>
+  <tr><th>Data</th><th>What happens</th></tr>
+  <tr><td>Singer PIN, login sessions, login-attempt records</td><td>Permanently deleted</td></tr>
+  <tr><td>Singer name, bio, contact details</td><td>Erased. Name is replaced with "Deleted singer"</td></tr>
+  <tr><td>Singer mobile number</td><td>Anonymized, so the same number can register again later</td></tr>
+  <tr><td>Singer profile photo and pending upload files</td><td>Deleted from our storage</td></tr>
+  <tr><td>Singer's songs</td><td>Removed from the App, public lists and rankings immediately. Their audio files are then deleted from our storage. Songs waiting for review are cancelled.</td></tr>
+  <tr><td>Your name and mobile number in Custom Song Requests addressed to a deleted singer</td><td>Removed</td></tr>
+  <tr><td>Listener device ID, likes and favorites</td><td>Deleted on request. Your likes and favorites are lost with it.</td></tr>
+  <tr><td>Custom Song Requests and feedback you sent</td><td>Deleted on request</td></tr>
+  <tr><td>Record that a singer accepted the Singer Terms (terms version, date and time, IP address, verification hash)</td><td><strong>Kept</strong>, without name or mobile number, as legal proof of consent</td></tr>
+  <tr><td>Earnings and listening statistics</td><td><strong>Kept</strong> with only an anonymous ID and no personal details, for accounting</td></tr>
+  <tr><td>Live listening sessions and short-term counters</td><td>Deleted automatically (about 90 days and about 1 day respectively)</td></tr>
+</table>
+</div>
+
+<h2>5. Contact</h2>
+<p>Questions about deletion or your data: <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
+
+<footer>&copy; 2026 Mewati Song Player. All rights reserved.</footer>
+
+</main>
+</body>
+</html>
