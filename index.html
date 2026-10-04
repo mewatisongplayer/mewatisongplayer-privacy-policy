@@ -1,174 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - Mewati Song Player</title>
-<style>
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px 20px 60px;
-    line-height: 1.65;
-    color: #222;
-    background: #fafafa;
-  }
-  h1 {
-    font-size: 28px;
-    border-bottom: 2px solid #6FAF5A;
-    padding-bottom: 12px;
-    margin-bottom: 8px;
-  }
-  h2 {
-    font-size: 20px;
-    color: #3E7A38;
-    margin-top: 32px;
-    margin-bottom: 12px;
-  }
-  h3 {
-    font-size: 16px;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 8px;
-  }
-  .meta {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  a { color: #3E7A38; }
-  code {
-    background: #eee;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 13px;
-  }
-  footer {
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #888;
-    text-align: center;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Mewati Song Player</title>
+  <style>
+    :root { --bg: #ffffff; --fg: #1d2420; --muted: #5b665f; --accent: #2e7d32; --line: #e2e8e4; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #121614; --fg: #e8eeea; --muted: #a2afa7; --accent: #81c784; --line: #2a332e; }
+    }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 56px; }
+    h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+    h3 { font-size: 1.05rem; margin: 22px 0 6px; }
+    p, li { margin: 8px 0; }
+    ul { padding-left: 22px; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); margin: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: rgba(127,127,127,0.1); }
+    .wrap { overflow-x: auto; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+  </style>
 </head>
 <body>
+<main>
 
-<h1>Privacy Policy</h1>
-<p class="meta">
-  <strong>Mewati Song Player</strong><br>
-  Last Updated: 21 September 2026<br>
-  Effective Date: 21 September 2026
-</p>
+<h1>Privacy Policy - Mewati Song Player</h1>
+<p class="meta"><strong>Mewati Song Player</strong></p>
+<p class="meta">Last Updated: 5 October 2026</p>
+<p class="meta">Effective Date: 5 October 2026</p>
 
 <h2>1. Introduction</h2>
-<p>Welcome to <strong>Mewati Song Player</strong> ("we", "our", "us", "the App"). This Privacy Policy explains how we collect, use, store, and protect your information when you use our mobile application.</p>
+<p>Welcome to <strong>Mewati Song Player</strong> ("we", "our", "us", "the App"). This Privacy Policy explains how we collect, use, store, share and delete your information when you use our Android application.</p>
 <p>By using Mewati Song Player, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
 <p><strong>Contact:</strong> <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
 
 <h2>2. Information We Collect</h2>
 
-<h3>2.1 Automatically Collected Information</h3>
+<h3>2.1 Automatically Collected Information (all users)</h3>
 <ul>
-  <li><strong>Device Identifier:</strong> When you first install the App, we generate a random anonymous device ID (UUID) and store it on your device. This is used to remember your likes, favorites, and preferences. It does NOT identify you personally.</li>
-  <li><strong>Usage Analytics:</strong> We collect anonymous playback information such as which songs are played, play counts, and general listening activity. This helps us improve the App.</li>
-  <li><strong>Device Information:</strong> Operating system version, device model, and app version — used for crash reporting and bug fixing.</li>
-  <li><strong>IP Address and Approximate Location:</strong> When you connect to our servers, your IP address and approximate geographic location (country, region, city) are logged for analytics and abuse prevention.</li>
+  <li><strong>Device Identifier:</strong> When you first open the App, we generate a random anonymous device ID (UUID) and store it on your device. It is sent to our servers to remember your likes and favorites and to count listening. It does NOT contain your name, phone number or any other personal detail.</li>
+  <li><strong>Listening Activity:</strong> Which songs you play, how many seconds you listen, and the category of the song. We use this to show trending songs, to improve the App, and to calculate singers' earnings.</li>
+  <li><strong>Approximate Location:</strong> When you connect to our servers, your IP address is seen by our hosting provider (Cloudflare). From it we record an approximate location (country, region, city and approximate coordinates). We do <strong>not</strong> access your phone's GPS and the App does not ask for location permission.</li>
+  <li><strong>Device and Crash Information:</strong> Operating system version, device model, app version, and technical details of crashes or errors, used for bug fixing (see Section 10, Sentry).</li>
 </ul>
 
-<h3>2.2 Information You Voluntarily Provide</h3>
+<h3>2.2 Information You Provide</h3>
 <ul>
-  <li><strong>Feedback and Suggestions:</strong> If you submit feedback, bug reports, or song suggestions, we store your message and optional contact information.</li>
-  <li><strong>Voice Search Input:</strong> If you use voice search, your voice is processed locally on your device or via your device's built-in speech recognition. Voice recordings are NOT transmitted to or stored on our servers.</li>
+  <li><strong>Feedback and Suggestions:</strong> If you send feedback, we store your message, the category you pick, the song (if any) you refer to, and your device ID. Please do not include sensitive personal details in the message.</li>
+  <li><strong>Custom Song Request ("अपना गाना भरवाएँ"):</strong> If you use this feature, we collect your name, mobile number, the singer you choose, the requested song length, and any shayari or lyrics you type. We store this on our servers and the App then opens WhatsApp on your phone with a prefilled message to the chosen singer. The message is sent only if you press send in WhatsApp, and WhatsApp's own privacy policy applies to it. The singer will see your name, mobile number and request.</li>
+  <li><strong>Voice Search:</strong> If you use voice search, the App uses the microphone and your phone's built-in Android speech recognition service. We do not record, receive or store your voice. Depending on your phone, the speech recognition provider (for example Google) may process audio under its own privacy policy.</li>
 </ul>
 
-<h3>2.3 Information Collected for Singer Registration (KYC)</h3>
-<p>If you apply to register as a singer, we additionally collect:</p>
+<h3>2.3 Singer Registration and Singer Account</h3>
+<p>If you register as a singer, we additionally collect and store:</p>
 <ul>
-  <li>Full name</li>
-  <li>Mobile number (10-digit)</li>
-  <li>Government-issued ID document photograph (for identity verification)</li>
-  <li>Live selfie photograph (for liveness verification)</li>
-  <li>Consent agreement metadata (timestamp, device information)</li>
+  <li>Your name and 10-digit mobile number.</li>
+  <li>A 6-digit PIN that you choose. We store only a salted, hashed form of the PIN, never the PIN itself.</li>
+  <li>A record of your acceptance of the Singer Terms: the terms version and text, the date and time, your IP address, basic device information, and a verification hash. This is kept as legal proof of consent.</li>
+  <li>Songs you upload (audio files and cover images), their titles and categories, and your optional profile photo.</li>
+  <li>Login sessions (secure login tokens that expire after 30 days) and failed-login counters used to block guessing of PINs.</li>
+  <li>Listening and earnings statistics for your songs, which are linked to an anonymous singer ID.</li>
 </ul>
-<p>This information is stored securely and used solely for identity verification and fraud prevention.</p>
+<p><strong>Public display:</strong> For singers, your name, profile photo and approved songs are visible to all App users. Your name and mobile number are also shown in the Custom Song Request singer list so that listeners can contact you, as described in the Singer Terms.</p>
+<p><strong>"Remember PIN" on your phone:</strong> If you choose this option, your mobile number and PIN are saved only on your own phone, in Android's encrypted secure storage. They are not sent anywhere by this feature, and they are erased when you log out or delete your account.</p>
 
-<h2>3. How We Use Your Information</h2>
+<h2>3. App Permissions</h2>
 <ul>
-  <li>Providing, maintaining, and improving the App's functionality</li>
-  <li>Remembering your likes, favorites, and downloads</li>
-  <li>Processing singer registration applications</li>
-  <li>Sending responses to your feedback</li>
-  <li>Analyzing usage patterns to improve user experience</li>
-  <li>Preventing fraud, abuse, and unauthorized access</li>
+  <li><strong>Internet:</strong> to stream songs and talk to our servers.</li>
+  <li><strong>Microphone (RECORD_AUDIO):</strong> only for voice search, and only when you start it.</li>
+  <li><strong>Notifications:</strong> to show the music player controls and download progress.</li>
+  <li><strong>Foreground service (media playback) and Wake lock:</strong> to keep music playing when the screen is off.</li>
+  <li><strong>Vibrate:</strong> for haptic feedback.</li>
+</ul>
+<p>The App does not request access to your contacts, location, camera or photos.</p>
+
+<h2>4. How We Use Your Information</h2>
+<ul>
+  <li>Providing, maintaining and improving the App</li>
+  <li>Remembering your likes and favorites</li>
+  <li>Showing trending songs and singer rankings</li>
+  <li>Processing singer registrations, reviewing uploaded songs, and running singer accounts</li>
+  <li>Calculating and reporting singer earnings</li>
+  <li>Passing custom song requests to the singer you chose</li>
+  <li>Replying to your feedback</li>
+  <li>Preventing fraud, abuse, spam and unauthorized access</li>
+  <li>Fixing crashes and bugs</li>
   <li>Complying with legal obligations</li>
 </ul>
 
-<h2>4. How We Store Your Information</h2>
-<ul>
-  <li><strong>Device ID and Preferences:</strong> Stored locally on your device using encrypted storage.</li>
-  <li><strong>Likes, Favorites, and Analytics:</strong> Stored on our secure cloud infrastructure (Cloudflare D1 database).</li>
-  <li><strong>Singer KYC Documents:</strong> Stored in encrypted Cloudflare R2 object storage with restricted access.</li>
-  <li><strong>Crash Reports:</strong> Processed via Sentry, a third-party error monitoring service.</li>
-</ul>
-<p>We retain your data only as long as necessary to provide our services. Anonymous analytics data may be retained for up to 90 days. Singer KYC records are retained for legal compliance purposes.</p>
+<h2>5. How We Store Your Information and For How Long</h2>
+<p>Data is stored on Cloudflare infrastructure (D1 database and R2 file storage). Downloaded songs, your saved settings and your device ID are stored on your phone.</p>
+<div class="wrap">
+<table>
+  <tr><th>Data</th><th>Where</th><th>How long</th></tr>
+  <tr><td>Device ID, likes, favorites</td><td>Your phone and our database</td><td>Until you ask us to delete them (see Section 8). Uninstalling the App removes the ID from your phone but not from our database.</td></tr>
+  <tr><td>Live listening sessions (IP address, approximate location, song)</td><td>Our database</td><td>Deleted automatically about 90 days after last activity</td></tr>
+  <tr><td>Short-term play counters</td><td>Our database</td><td>Deleted automatically after about 1 day</td></tr>
+  <tr><td>Listening-time records (device ID, song, seconds, country, region)</td><td>Our database</td><td>Kept as long as needed to calculate singer earnings and for accounting records</td></tr>
+  <tr><td>Feedback</td><td>Our database</td><td>Until no longer needed to improve the App, or until you ask for deletion</td></tr>
+  <tr><td>Custom song requests (name, mobile, lyrics)</td><td>Our database</td><td>Until no longer needed to resolve the request, or until you ask for deletion</td></tr>
+  <tr><td>Singer profile, PIN hash, songs, photo</td><td>Our database and R2 storage</td><td>Until the singer deletes the account (Section 8)</td></tr>
+  <tr><td>Singer login sessions and failed-login counters</td><td>Our database</td><td>Deleted automatically soon after they expire (counters after about 1 day)</td></tr>
+  <tr><td>Files of rejected song uploads</td><td>R2 storage</td><td>Deleted about 7 days after rejection</td></tr>
+  <tr><td>Singer consent record (terms version, time, IP address, hash)</td><td>Our database</td><td>Kept as legal proof, de-identified after account deletion</td></tr>
+  <tr><td>Crash reports</td><td>Sentry</td><td>Per Sentry's retention settings</td></tr>
+</table>
+</div>
 
-<h2>5. Data Sharing and Disclosure</h2>
+<h2>6. Data Sharing and Disclosure</h2>
 <p>We do <strong>NOT</strong> sell, rent, or trade your personal information.</p>
-<p>We may share information only in the following limited circumstances:</p>
+<p>We share information only in these limited cases:</p>
 <ul>
-  <li><strong>Service Providers:</strong> With trusted third-party services (Cloudflare for hosting, Sentry for crash reporting) that help us operate the App.</li>
+  <li><strong>Service Providers:</strong> Cloudflare (hosting, database, file storage) and Sentry (crash reporting), which help us run the App.</li>
+  <li><strong>Singers:</strong> If you send a Custom Song Request, the singer you choose receives your name, mobile number and request details.</li>
+  <li><strong>All App users:</strong> A registered singer's name, photo, songs and (in the Custom Song Request list) mobile number are visible to every user of the App.</li>
+  <li><strong>WhatsApp:</strong> Only when you choose to send a request through WhatsApp.</li>
   <li><strong>Legal Requirements:</strong> When required by law, court order, or government request.</li>
-  <li><strong>Safety:</strong> To protect the rights, property, or safety of Mewati Song Player, our users, or the public.</li>
+  <li><strong>Safety:</strong> To protect the rights, property or safety of Mewati Song Player, our users, or the public.</li>
 </ul>
 
-<h2>6. Children's Privacy</h2>
+<h2>7. Children's Privacy</h2>
 <p>Mewati Song Player is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will delete it promptly. If you believe a child has provided us with personal information, please contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
 
-<h2>7. Your Rights and Choices</h2>
+<h2>8. Your Rights, Choices and Account Deletion</h2>
 <p>You have the following rights:</p>
 <ul>
   <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
   <li><strong>Correction:</strong> Request correction of inaccurate information.</li>
-  <li><strong>Deletion:</strong> Request deletion of your personal information. Note that deleting your device ID will also remove your likes and favorites since these are tied to your anonymous device.</li>
-  <li><strong>Opt-Out:</strong> You can stop using the App at any time and uninstall it. To opt out of analytics, simply uninstall the App.</li>
+  <li><strong>Deletion:</strong> Request deletion of your personal information.</li>
+  <li><strong>Opt-Out:</strong> You can stop using the App at any time and uninstall it.</li>
 </ul>
-<p>To exercise these rights, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
 
-<h2>8. Security</h2>
+<h3>8.1 Singers: delete your account inside the App</h3>
+<p>A singer can delete their account at any time: open <strong>Singer Profile</strong>, tap <strong>खाता हटाएं (Delete account)</strong>, and confirm with your PIN. This cannot be undone. When you do this:</p>
+<ul>
+  <li>Your PIN, login sessions and login-attempt records are permanently deleted.</li>
+  <li>Your name is replaced by "Deleted singer", and your bio, profile photo and contact details are erased.</li>
+  <li>Your mobile number is anonymized, so the same number can be used to register again later.</li>
+  <li>You and your songs are removed from public lists, rankings and the Custom Song Request list. Any song of yours still waiting for review is cancelled.</li>
+  <li>Your profile photo and any pending upload files are deleted from our storage immediately. Your songs disappear from the App immediately, and we then delete their audio files from our storage.</li>
+  <li>Your name and mobile number are removed from past Custom Song Requests that were addressed to you.</li>
+</ul>
+<p><strong>What we keep after deletion:</strong> the record that you accepted the Singer Terms (terms version, date and time, IP address and verification hash), kept without your name or mobile number as legal proof; and earnings and listening statistics that carry only an anonymous singer ID and no personal details.</p>
+
+<h3>8.2 Listeners and everyone else</h3>
+<p>Because the device ID is anonymous, we cannot look up your data by name. To ask for access or deletion of your data (including a Custom Song Request or feedback you sent), email us from the address you wish to use at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, tell us what you want deleted, and include the mobile number you used (for custom song requests). We may ask for extra details to find your records. Note that deleting your device ID also removes your likes and favorites, since they are tied to it. We aim to reply within 30 days.</p>
+
+<h2>9. Security</h2>
 <p>We take reasonable measures to protect your information, including:</p>
 <ul>
   <li>Encrypted transmission (HTTPS) for all data sent to our servers</li>
-  <li>Restricted access to KYC documents</li>
+  <li>Singer PINs stored only as salted hashes, with a temporary lock after repeated wrong attempts</li>
+  <li>Saved login details on your phone kept in Android's encrypted secure storage</li>
+  <li>Restricted access to our database, uploaded files and admin tools</li>
   <li>Regular security updates to our infrastructure</li>
 </ul>
 <p>However, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
 
-<h2>9. Third-Party Services</h2>
+<h2>10. Third-Party Services</h2>
 <p>The App uses the following third-party services, each with its own privacy policy:</p>
 <ul>
-  <li><strong>Cloudflare</strong> (hosting and data storage): <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></li>
-  <li><strong>Sentry</strong> (crash reporting): <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a></li>
+  <li><strong>Cloudflare</strong> (hosting, database and file storage): <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></li>
+  <li><strong>Sentry</strong> (crash reporting and performance monitoring): <a href="https://sentry.io/privacy/">sentry.io/privacy</a></li>
+  <li><strong>WhatsApp</strong> (only if you choose to send a Custom Song Request): <a href="https://www.whatsapp.com/legal/privacy-policy">whatsapp.com/legal/privacy-policy</a></li>
+  <li><strong>Android speech recognition</strong> (only for voice search): provided by your phone's speech service, for example Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
 </ul>
+<p>The App does not show advertisements and does not use advertising identifiers.</p>
 
-<h2>10. Content and Copyright</h2>
+<h2>11. Content and Copyright</h2>
 <p>Mewati Song Player streams audio content. All song copyrights belong to their respective owners. If you believe your copyright has been infringed, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
 
-<h2>11. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of the App after changes means you accept the updated policy.</p>
+<h2>12. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. If we make a major change, such as collecting new kinds of data, we will also try to tell you inside the App. Continued use of the App after changes means you accept the updated policy.</p>
 
-<h2>12. Contact Us</h2>
-<p>If you have any questions about this Privacy Policy, contact us at:</p>
+<h2>13. Contact Us</h2>
+<p>If you have any questions or complaints about this Privacy Policy or how your data is handled, contact us at:</p>
 <p><strong>Email:</strong> <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
 
-<footer>
-  &copy; 2026 Mewati Song Player. All rights reserved.
-</footer>
+<footer>&copy; 2026 Mewati Song Player. All rights reserved.</footer>
 
+</main>
 </body>
 </html>
