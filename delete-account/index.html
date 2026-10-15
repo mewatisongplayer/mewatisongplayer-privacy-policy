@@ -130,8 +130,8 @@ footer b{color:var(--tx)}
     <p>If you registered as a singer, you can delete your account yourself, without contacting us:</p>
     <ol class="steps">
       <li><b>Open Singer Profile</b>Open the Mewati Song Player app, go to <strong>Singer Profile</strong> and log in.</li>
-      <li><b>Tap Delete account</b>Tap <strong>खाता हटाएं (Delete account)</strong> and read the warning.</li>
-      <li><b>Confirm with your PIN</b>Enter your 6-digit PIN to confirm.</li>
+      <li><b>Tap the delete icon</b>Tap the red <strong>delete</strong> icon at the top right of the singer screen (<strong>अकाउंट डिलीट करें</strong>) and read the warning. Tap <strong>ठीक है</strong> to continue.</li>
+      <li><b>Confirm with your PIN</b>Enter your 6-digit PIN and tap <strong>अकाउंट डिलीट करें</strong> (Delete account).</li>
     </ol>
 
     <h3>What happens next</h3>
@@ -147,14 +147,14 @@ footer b{color:var(--tx)}
   <section class="card" id="listeners">
     <h2><span class="num">2</span>Listeners: delete data linked to your phone</h2>
     <p>If you only listen to songs, the App has no login. Your likes, favorites and listening records are linked to a random anonymous device ID, so we cannot find them by name.</p>
-    <p>You can ask us to delete that data, and also a Custom Song Request or feedback you sent. Email us using the button in <a href="#email">Section 3</a> and tell us what you want deleted. For a Custom Song Request, include the mobile number you used. We may ask for a few extra details to locate your records.</p>
+    <p>You can ask us to delete that data, and also a Custom Song Request, feedback or a song report you sent. Email us using the button in <a href="#email">Section 3</a> and tell us what you want deleted. For a Custom Song Request, include the mobile number you used. For feedback or a report, include the phone number or email you gave (if any). We may ask for a few extra details to locate your records.</p>
     <div class="note">Uninstalling the App removes the device ID from your phone, but it does <strong>not</strong> delete the records already saved on our servers. Send us a request if you want those removed.</div>
   </section>
 
   <section class="card" id="email">
     <h2><span class="num">3</span>Send a deletion request by email</h2>
     <p>Tap the button, or write to <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>. We aim to reply within 30 days.</p>
-    <a class="btn" href="mailto:mewatisongplayer@gmail.com?subject=Delete%20my%20data%20-%20Mewati%20Song%20Player&amp;body=Please%20delete%20my%20data.%0A%0AI%20am%20a%3A%20(singer%20%2F%20listener)%0AMobile%20number%20used%20in%20the%20app%3A%20%0AWhat%20to%20delete%3A%20(account%20%2F%20custom%20song%20request%20%2F%20feedback%20%2F%20everything)%0A">✉️ Email a deletion request</a>
+    <a class="btn" href="mailto:mewatisongplayer@gmail.com?subject=Delete%20my%20data%20-%20Mewati%20Song%20Player&amp;body=Please%20delete%20my%20data.%0A%0AI%20am%20a%3A%20(singer%20%2F%20listener)%0AMobile%20number%20used%20in%20the%20app%3A%20%0APhone%20or%20email%20given%20in%20a%20report%20or%20feedback%20(if%20any)%3A%20%0AWhat%20to%20delete%3A%20(account%20%2F%20song%20audio%20files%20%2F%20custom%20song%20request%20%2F%20report%20or%20feedback%20%2F%20everything)%0A">✉️ Email a deletion request</a>
   </section>
 
   <section class="card" id="kept">
@@ -172,7 +172,9 @@ footer b{color:var(--tx)}
         <tr><td>Singer profile photo and pending upload files</td><td data-l="What happens">Deleted from our storage after the grace period. Songs waiting for review are cancelled</td></tr>
         <tr><td>The singer's own name and mobile number in Custom Song Requests addressed to that singer</td><td data-l="What happens">Removed after the grace period. The requesting listener's details are covered by the listener rows below</td></tr>
         <tr><td>Listener device ID, likes and favorites</td><td data-l="What happens">Deleted on request. Your likes and favorites are lost with it</td></tr>
-        <tr><td>Custom Song Requests and feedback you sent as a listener</td><td data-l="What happens">Deleted on request</td></tr>
+        <tr><td>Custom Song Requests you sent as a listener</td><td data-l="What happens">Deleted on request</td></tr>
+        <tr><td>Feedback and song reports you sent (message, category, song, device ID, and the phone number or email if you gave one)</td><td data-l="What happens">Deleted on request. Resolved reports are also deleted automatically about 1 year after they are resolved</td></tr>
+        <tr><td>Anti-spam hash of your IP address on feedback and reports</td><td data-l="What happens">Cleared automatically after about 7 days</td></tr>
         <tr><td>Record that a singer accepted the Singer Terms (terms version, date and time, IP address, verification hash)</td><td data-l="What happens"><strong>Kept</strong>, without name or mobile number, as legal proof of consent</td></tr>
         <tr><td>Earnings and listening statistics</td><td data-l="What happens"><strong>Kept</strong> with only an anonymous ID and no personal details, for accounting</td></tr>
         <tr><td>Live listening sessions and short-term counters</td><td data-l="What happens">Deleted automatically (about 90 days and about 1 day respectively)</td></tr>
