@@ -1,189 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Mewati Song Player</title>
-  <style>
-    :root { --bg: #ffffff; --fg: #1d2420; --muted: #5b665f; --accent: #2e7d32; --line: #e2e8e4; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #121614; --fg: #e8eeea; --muted: #a2afa7; --accent: #81c784; --line: #2a332e; }
-    }
-    body { margin: 0; background: var(--bg); color: var(--fg);
-           font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-    main { max-width: 760px; margin: 0 auto; padding: 24px 16px 56px; }
-    h1 { font-size: 1.8rem; margin: 0 0 4px; }
-    h2 { font-size: 1.25rem; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
-    h3 { font-size: 1.05rem; margin: 22px 0 6px; }
-    p, li { margin: 8px 0; }
-    ul { padding-left: 22px; }
-    a { color: var(--accent); }
-    .meta { color: var(--muted); margin: 0; }
-    table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 0.95rem; }
-    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
-    th { background: rgba(127,127,127,0.1); }
-    .wrap { overflow-x: auto; }
-    footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy – Mewati Song Player</title>
+<meta name="description" content="Privacy Policy of Mewati Song Player: what we collect, how we use it, and how you can delete your data.">
+<meta name="theme-color" content="#0a0a12">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a12; --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.1);
+  --tx:#efeef8; --mut:#a9a8bf; --accent:#f6b93b; --glass:rgba(10,10,18,.72);
+  --glow:.22; --shadow:rgba(0,0,0,.25);
+  --grad:linear-gradient(135deg,#f6b93b,#ff5e8a 55%,#7c5cff);
+}
+@media (prefers-color-scheme:light){
+  :root{
+    --bg:#f7f5fb; --card:rgba(255,255,255,.85); --line:rgba(20,16,50,.1);
+    --tx:#17142b; --mut:#5b5876; --accent:#b45309; --glass:rgba(247,245,251,.8);
+    --glow:.13; --shadow:rgba(40,30,90,.08);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Plus Jakarta Sans','Noto Sans Devanagari',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--tx);line-height:1.72;font-size:16px;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(600px 420px at 85% -5%,rgba(124,92,255,var(--glow)),transparent 70%),
+    radial-gradient(520px 380px at -5% 18%,rgba(246,185,59,var(--glow)),transparent 70%),
+    radial-gradient(520px 420px at 60% 108%,rgba(255,94,138,var(--glow)),transparent 70%);
+}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--grad);transform-origin:0 50%;transform:scaleX(0);z-index:100}
+
+.top{position:sticky;top:0;z-index:50;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.01em}
+.logo{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;box-shadow:0 6px 20px rgba(255,94,138,.35)}
+.logo svg{width:20px;height:20px}
+.pill{font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--mut);background:var(--card)}
+
+.hero{padding:44px 0 22px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
+h1{font-size:clamp(36px,7.5vw,64px);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin:16px 0 12px}
+h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:clamp(16px,2.4vw,19px);max-width:640px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip{font-size:13px;padding:8px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--mut)}
+.chip b{color:var(--tx)}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:26px 0 30px}
+.g{padding:16px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.g i{font-style:normal;font-size:22px;display:block;margin-bottom:6px}
+.g b{display:block;font-size:15px}
+.g span{font-size:13px;color:var(--mut);line-height:1.5;display:block}
+
+.layout{display:block}
+.toc{position:sticky;top:64px;z-index:40;margin:0 -20px 18px;padding:10px 20px;overflow-x:auto;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);scrollbar-width:none}
+.toc::-webkit-scrollbar{display:none}
+.toc ul{list-style:none;display:flex;gap:8px;width:max-content}
+.toc a{display:block;white-space:nowrap;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--mut);text-decoration:none;transition:.2s}
+.toc a.on{background:var(--grad);color:#fff;border-color:transparent}
+.toc-h{display:none}
+
+.card,.panel{scroll-margin-top:132px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px;margin-bottom:18px;box-shadow:0 10px 40px var(--shadow);opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.card.in{opacity:1;transform:none}
+.card h2{display:flex;align-items:center;gap:14px;font-size:clamp(20px,3.4vw,26px);letter-spacing:-.02em;margin-bottom:14px;font-weight:800;line-height:1.25}
+.num{flex:none;width:36px;height:36px;border-radius:11px;background:var(--grad);color:#fff;font-size:15px;display:grid;place-items:center;font-weight:800}
+.card h3{font-size:17px;margin:22px 0 8px;color:var(--accent);font-weight:700}
+.card p{color:var(--mut);margin-bottom:12px}
+.card p:last-child{margin-bottom:0}
+.card strong{color:var(--tx);font-weight:700}
+ul.l{list-style:none;display:grid;gap:10px;margin:8px 0 12px}
+ul.l li{position:relative;padding-left:22px;color:var(--mut)}
+ul.l li::before{content:"";position:absolute;left:2px;top:.7em;width:8px;height:8px;border-radius:50%;background:var(--grad)}
+.note{margin:14px 0;padding:14px 16px;border-radius:16px;border:1px solid var(--line);border-left:4px solid var(--accent);background:rgba(246,185,59,.08);color:var(--tx);font-size:15px}
+.note.good{border-left-color:#35d49a;background:rgba(53,212,154,.09)}
+
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+.tbl th{text-align:left;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding:10px 12px;border-bottom:1px solid var(--line)}
+.tbl td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--mut)}
+.tbl td:first-child{color:var(--tx);font-weight:600}
+
+.panel{margin-top:18px;padding:20px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,94,138,.09),rgba(124,92,255,.07))}
+.panel h3{margin-top:0!important}
+.steps{list-style:none;counter-reset:s;margin:14px 0 4px}
+.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px;color:var(--mut)}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.steps>li::after{content:"";position:absolute;left:17px;top:40px;bottom:4px;width:2px;background:var(--line)}
+.steps>li:last-child{padding-bottom:0}
+.steps>li:last-child::after{display:none}
+.steps b{display:block;color:var(--tx);font-size:16px;margin-bottom:4px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:14px;background:var(--grad);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 10px 28px rgba(255,94,138,.3);margin-top:6px}
+
+footer{padding:30px 0 60px;text-align:center;color:var(--mut);font-size:14px}
+footer b{color:var(--tx)}
+#top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border-radius:14px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--tx);font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s;z-index:60}
+#top.show{opacity:1;pointer-events:auto}
+
+@media (max-width:720px){
+  .card{padding:20px;border-radius:20px}
+  .tbl thead{display:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl tr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+  .tbl td{border:0;padding:3px 0}
+  .tbl td::before{content:attr(data-l);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-top:6px}
+  .tbl td:first-child::before{display:none}
+}
+@media (min-width:1000px){
+  .layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:34px;align-items:start}
+  .toc{top:92px;margin:0;padding:16px;overflow:visible;border:1px solid var(--line);border-radius:22px;background:var(--card);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .toc-h{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700;margin:0 0 10px 6px}
+  .toc ul{flex-direction:column;gap:2px;width:auto}
+  .toc a{border:0;background:transparent;border-radius:12px;padding:9px 12px;white-space:normal}
+  .toc a:hover{background:var(--line)}
+  .toc a.on{background:var(--grad)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .card{opacity:1;transform:none;transition:none}
+}
+</style>
+<noscript><style>.card{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
-<main>
+<div id="bar"></div>
 
-<h1>Privacy Policy - Mewati Song Player</h1>
-<p class="meta"><strong>Mewati Song Player</strong></p>
-<p class="meta">Last Updated: 5 October 2026</p>
-<p class="meta">Effective Date: 5 October 2026</p>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+      Mewati Song Player
+    </div>
+    <span class="pill">Privacy Policy</span>
+  </div>
+</header>
 
-<h2>1. Introduction</h2>
-<p>Welcome to <strong>Mewati Song Player</strong> ("we", "our", "us", "the App"). This Privacy Policy explains how we collect, use, store, share and delete your information when you use our Android application.</p>
-<p>By using Mewati Song Player, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
-<p><strong>Contact:</strong> <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">🔒 Your privacy matters</span>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="lead">Found in Mewat, built in Mewat, made for Mewaties. Here is exactly what Mewati Song Player collects, why, and how you can delete it.</p>
+    <div class="meta">
+      <div class="chip">Last Updated: <b>15 October 2026</b></div>
+      <div class="chip">Effective Date: <b>5 October 2026</b></div>
+      <div class="chip">Platform: <b>Android</b></div>
+    </div>
+    <div class="glance">
+      <div class="g"><i>🚫</i><b>No ads</b><span>No advertisements and no advertising identifiers.</span></div>
+      <div class="g"><i>🤝</i><b>Never sold</b><span>We do not sell, rent or trade your personal information.</span></div>
+      <div class="g"><i>📍</i><b>No GPS access</b><span>The App never asks for your phone's location.</span></div>
+      <div class="g"><i>🎙️</i><b>Voice not stored</b><span>Voice search audio is not recorded or stored by us.</span></div>
+    </div>
+  </section>
 
-<h2>2. Information We Collect</h2>
+  <div class="layout">
+    <nav class="toc" aria-label="Contents" id="toc">
+      <p class="toc-h">Contents</p>
+      <ul>
+        <li><a href="#s1">Intro</a></li>
+        <li><a href="#s2">Data We Collect</a></li>
+        <li><a href="#s3">Permissions</a></li>
+        <li><a href="#s4">How We Use It</a></li>
+        <li><a href="#s5">Storage</a></li>
+        <li><a href="#s6">Sharing</a></li>
+        <li><a href="#s7">Children</a></li>
+        <li><a href="#s8">Your Rights &amp; Deletion</a></li>
+        <li><a href="#s9">Security</a></li>
+        <li><a href="#s10">Third-Party</a></li>
+        <li><a href="#s11">Copyright</a></li>
+        <li><a href="#s12">Changes</a></li>
+        <li><a href="#s13">Contact</a></li>
+      </ul>
+    </nav>
 
-<h3>2.1 Automatically Collected Information (all users)</h3>
-<ul>
-  <li><strong>Device Identifier:</strong> When you first open the App, we generate a random anonymous device ID (UUID) and store it on your device. It is sent to our servers to remember your likes and favorites and to count listening. It does NOT contain your name, phone number or any other personal detail.</li>
-  <li><strong>Listening Activity:</strong> Which songs you play, how many seconds you listen, and the category of the song. We use this to show trending songs, to improve the App, and to calculate singers' earnings.</li>
-  <li><strong>Approximate Location:</strong> When you connect to our servers, your IP address is seen by our hosting provider (Cloudflare). From it we record an approximate location (country, region, city and approximate coordinates). We do <strong>not</strong> access your phone's GPS and the App does not ask for location permission.</li>
-  <li><strong>Device and Crash Information:</strong> Operating system version, device model, app version, and technical details of crashes or errors, used for bug fixing (see Section 10, Sentry).</li>
-</ul>
+    <div>
+      <section class="card" id="s1">
+        <h2><span class="num">1</span>Introduction</h2>
+        <p>Welcome to Mewati Song Player ("we", "our", "us", "the App"). This Privacy Policy explains how we collect, use, store, share and delete your information when you use our Android application.</p>
+        <p>By using Mewati Song Player, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
+        <p>Contact: <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
+      </section>
 
-<h3>2.2 Information You Provide</h3>
-<ul>
-  <li><strong>Feedback and Suggestions:</strong> If you send feedback, we store your message, the category you pick, the song (if any) you refer to, and your device ID. Please do not include sensitive personal details in the message.</li>
-  <li><strong>Custom Song Request ("अपना गाना भरवाएँ"):</strong> If you use this feature, we collect your name, mobile number, the singer you choose, the requested song length, and any shayari or lyrics you type. We store this on our servers and the App then opens WhatsApp on your phone with a prefilled message to the chosen singer. The message is sent only if you press send in WhatsApp, and WhatsApp's own privacy policy applies to it. The singer will see your name, mobile number and request.</li>
-  <li><strong>Voice Search:</strong> If you use voice search, the App uses the microphone and your phone's built-in Android speech recognition service. We do not record, receive or store your voice. Depending on your phone, the speech recognition provider (for example Google) may process audio under its own privacy policy.</li>
-</ul>
+      <section class="card" id="s2">
+        <h2><span class="num">2</span>Information We Collect</h2>
+        <h3>2.1 Automatically collected information (all users)</h3>
+        <ul class="l">
+          <li><strong>Device Identifier:</strong> When you first open the App, we generate a random anonymous device ID (UUID) and store it on your device. It is sent to our servers to remember your likes and favorites and to count listening. It does NOT contain your name, phone number or any other personal detail.</li>
+          <li><strong>Listening Activity:</strong> Which songs you play, how many seconds you listen, and the category of the song. We use this to show trending songs, to improve the App, and to calculate singers' earnings.</li>
+          <li><strong>Approximate Location:</strong> When you connect to our servers, your IP address is seen by our hosting provider (Cloudflare). From it we record an approximate location (country, region, city and approximate coordinates). We do not access your phone's GPS and the App does not ask for location permission.</li>
+          <li><strong>Device and Crash Information:</strong> Operating system version, device model, app version, and technical details of crashes or errors, used for bug fixing (see <a href="#s10">Section 10</a>, Sentry).</li>
+        </ul>
 
-<h3>2.3 Singer Registration and Singer Account</h3>
-<p>If you register as a singer, we additionally collect and store:</p>
-<ul>
-  <li>Your name and 10-digit mobile number.</li>
-  <li>A 6-digit PIN that you choose. We store only a salted, hashed form of the PIN, never the PIN itself.</li>
-  <li>A record of your acceptance of the Singer Terms: the terms version and text, the date and time, your IP address, basic device information, and a verification hash. This is kept as legal proof of consent.</li>
-  <li>Songs you upload (audio files and cover images), their titles and categories, and your optional profile photo.</li>
-  <li>Login sessions (secure login tokens that expire after 30 days) and failed-login counters used to block guessing of PINs.</li>
-  <li>Listening and earnings statistics for your songs, which are linked to an anonymous singer ID.</li>
-</ul>
-<p><strong>Public display:</strong> For singers, your name, profile photo and approved songs are visible to all App users. Your name and mobile number are also shown in the Custom Song Request singer list so that listeners can contact you, as described in the Singer Terms.</p>
-<p><strong>"Remember PIN" on your phone:</strong> If you choose this option, your mobile number and PIN are saved only on your own phone, in Android's encrypted secure storage. They are not sent anywhere by this feature, and they are erased when you log out or delete your account.</p>
+        <h3>2.2 Information you provide</h3>
+        <ul class="l">
+          <li><strong>Feedback and Suggestions:</strong> If you send feedback, we store your message, the category you pick, the song (if any) you refer to, and your device ID. Please do not include sensitive personal details in the message.</li>
+          <li><strong>Custom Song Request ("अपना गाना भरवाएँ"):</strong> If you use this feature, we collect your name, mobile number, the singer you choose, the requested song length, and any shayari or lyrics you type. We store this on our servers and the App then opens WhatsApp on your phone with a prefilled message to the chosen singer. The message is sent only if you press send in WhatsApp, and WhatsApp's own privacy policy applies to it. The singer will see your name, mobile number and request.</li>
+          <li><strong>Voice Search:</strong> If you use voice search, the App uses the microphone and your phone's built-in Android speech recognition service. We do not record, receive or store your voice. Depending on your phone, the speech recognition provider (for example Google) may process audio under its own privacy policy.</li>
+        </ul>
 
-<h2>3. App Permissions</h2>
-<ul>
-  <li><strong>Internet:</strong> to stream songs and talk to our servers.</li>
-  <li><strong>Microphone (RECORD_AUDIO):</strong> only for voice search, and only when you start it.</li>
-  <li><strong>Notifications:</strong> to show the music player controls and download progress.</li>
-  <li><strong>Foreground service (media playback) and Wake lock:</strong> to keep music playing when the screen is off.</li>
-  <li><strong>Vibrate:</strong> for haptic feedback.</li>
-</ul>
-<p>The App does not request access to your contacts, location, camera or photos.</p>
+        <h3>2.3 Singer registration and singer account</h3>
+        <p>If you register as a singer, we additionally collect and store:</p>
+        <ul class="l">
+          <li>Your name and 10-digit mobile number.</li>
+          <li>A 6-digit PIN that you choose. We store only a salted, hashed form of the PIN, never the PIN itself.</li>
+          <li>A record of your acceptance of the Singer Terms: the terms version and text, the date and time, your IP address, basic device information, and a verification hash. This is kept as legal proof of consent.</li>
+          <li>Songs you upload (audio files and cover images), their titles and categories, and your optional profile photo.</li>
+          <li>Login sessions (secure login tokens that expire after 30 days) and failed-login counters used to block guessing of PINs.</li>
+          <li>Listening and earnings statistics for your songs, which are linked to an anonymous singer ID.</li>
+        </ul>
+        <div class="note"><strong>Public display:</strong> For singers, your name, profile photo and approved songs are visible to all App users. Your name and mobile number are also shown in the Custom Song Request singer list so that listeners can contact you, as described in the Singer Terms.</div>
+        <p><strong>"Remember PIN" on your phone:</strong> If you choose this option, your mobile number and PIN are saved only on your own phone, in Android's encrypted secure storage. They are not sent anywhere by this feature, and they are erased when you log out or delete your account.</p>
+      </section>
 
-<h2>4. How We Use Your Information</h2>
-<ul>
-  <li>Providing, maintaining and improving the App</li>
-  <li>Remembering your likes and favorites</li>
-  <li>Showing trending songs and singer rankings</li>
-  <li>Processing singer registrations, reviewing uploaded songs, and running singer accounts</li>
-  <li>Calculating and reporting singer earnings</li>
-  <li>Passing custom song requests to the singer you chose</li>
-  <li>Replying to your feedback</li>
-  <li>Preventing fraud, abuse, spam and unauthorized access</li>
-  <li>Fixing crashes and bugs</li>
-  <li>Complying with legal obligations</li>
-</ul>
+      <section class="card" id="s3">
+        <h2><span class="num">3</span>App Permissions</h2>
+        <ul class="l">
+          <li><strong>Internet:</strong> to stream songs and talk to our servers.</li>
+          <li><strong>Microphone (RECORD_AUDIO):</strong> only for voice search, and only when you start it.</li>
+          <li><strong>Notifications:</strong> to show the music player controls, download progress and new-song alerts.</li>
+          <li><strong>Foreground service (media playback) and Wake lock:</strong> to keep music playing when the screen is off.</li>
+          <li><strong>Vibrate:</strong> for haptic feedback.</li>
+        </ul>
+        <div class="note good">The App does not request access to your contacts, location, camera or photos.</div>
+      </section>
 
-<h2>5. How We Store Your Information and For How Long</h2>
-<p>Data is stored on Cloudflare infrastructure (D1 database and R2 file storage). Downloaded songs, your saved settings and your device ID are stored on your phone.</p>
-<div class="wrap">
-<table>
-  <tr><th>Data</th><th>Where</th><th>How long</th></tr>
-  <tr><td>Device ID, likes, favorites</td><td>Your phone and our database</td><td>Until you ask us to delete them (see Section 8). Uninstalling the App removes the ID from your phone but not from our database.</td></tr>
-  <tr><td>Live listening sessions (IP address, approximate location, song)</td><td>Our database</td><td>Deleted automatically about 90 days after last activity</td></tr>
-  <tr><td>Short-term play counters</td><td>Our database</td><td>Deleted automatically after about 1 day</td></tr>
-  <tr><td>Listening-time records (device ID, song, seconds, country, region)</td><td>Our database</td><td>Kept as long as needed to calculate singer earnings and for accounting records</td></tr>
-  <tr><td>Feedback</td><td>Our database</td><td>Until no longer needed to improve the App, or until you ask for deletion</td></tr>
-  <tr><td>Custom song requests (name, mobile, lyrics)</td><td>Our database</td><td>Until no longer needed to resolve the request, or until you ask for deletion</td></tr>
-  <tr><td>Singer profile, PIN hash, songs, photo</td><td>Our database and R2 storage</td><td>Until the singer deletes the account (Section 8)</td></tr>
-  <tr><td>Singer login sessions and failed-login counters</td><td>Our database</td><td>Deleted automatically soon after they expire (counters after about 1 day)</td></tr>
-  <tr><td>Files of rejected song uploads</td><td>R2 storage</td><td>Deleted about 7 days after rejection</td></tr>
-  <tr><td>Singer consent record (terms version, time, IP address, hash)</td><td>Our database</td><td>Kept as legal proof, de-identified after account deletion</td></tr>
-  <tr><td>Crash reports</td><td>Sentry</td><td>Per Sentry's retention settings</td></tr>
-</table>
-</div>
+      <section class="card" id="s4">
+        <h2><span class="num">4</span>How We Use Your Information</h2>
+        <ul class="l">
+          <li>Providing, maintaining and improving the App</li>
+          <li>Remembering your likes and favorites</li>
+          <li>Showing trending songs and singer rankings</li>
+          <li>Processing singer registrations, reviewing uploaded songs, and running singer accounts</li>
+          <li>Calculating and reporting singer earnings</li>
+          <li>Passing custom song requests to the singer you chose</li>
+          <li>Replying to your feedback</li>
+          <li>Preventing fraud, abuse, spam and unauthorized access</li>
+          <li>Fixing crashes and bugs</li>
+          <li>Complying with legal obligations</li>
+        </ul>
+      </section>
 
-<h2>6. Data Sharing and Disclosure</h2>
-<p>We do <strong>NOT</strong> sell, rent, or trade your personal information.</p>
-<p>We share information only in these limited cases:</p>
-<ul>
-  <li><strong>Service Providers:</strong> Cloudflare (hosting, database, file storage) and Sentry (crash reporting), which help us run the App.</li>
-  <li><strong>Singers:</strong> If you send a Custom Song Request, the singer you choose receives your name, mobile number and request details.</li>
-  <li><strong>All App users:</strong> A registered singer's name, photo, songs and (in the Custom Song Request list) mobile number are visible to every user of the App.</li>
-  <li><strong>WhatsApp:</strong> Only when you choose to send a request through WhatsApp.</li>
-  <li><strong>Legal Requirements:</strong> When required by law, court order, or government request.</li>
-  <li><strong>Safety:</strong> To protect the rights, property or safety of Mewati Song Player, our users, or the public.</li>
-</ul>
+      <section class="card" id="s5">
+        <h2><span class="num">5</span>How Long We Store Your Information</h2>
+        <p>Data is stored on Cloudflare infrastructure (D1 database and R2 file storage). Downloaded songs, your saved settings and your device ID are stored on your phone.</p>
+        <table class="tbl">
+          <thead><tr><th>Data</th><th>Where</th><th>How long</th></tr></thead>
+          <tbody>
+            <tr><td>Device ID, likes, favorites</td><td data-l="Where">Your phone and our database</td><td data-l="How long">Until you ask us to delete them (see <a href="#s8">Section 8</a>). Uninstalling the App removes the ID from your phone but not from our database.</td></tr>
+            <tr><td>Live listening sessions (IP address, approximate location, song)</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically about 90 days after last activity</td></tr>
+            <tr><td>Short-term play counters</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically after about 1 day</td></tr>
+            <tr><td>Listening-time records (device ID, song, seconds, country, region)</td><td data-l="Where">Our database</td><td data-l="How long">Kept as long as needed to calculate singer earnings and for accounting records</td></tr>
+            <tr><td>Feedback</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to improve the App, or until you ask for deletion</td></tr>
+            <tr><td>Custom song requests (name, mobile, lyrics)</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to resolve the request, or until you ask for deletion</td></tr>
+            <tr><td>Singer profile, PIN hash, songs, photo</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Until the singer deletes the account (<a href="#s8">Section 8</a>)</td></tr>
+            <tr><td>Singer login sessions and failed-login counters</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically soon after they expire (counters after about 1 day)</td></tr>
+            <tr><td>Files of rejected song uploads</td><td data-l="Where">R2 storage</td><td data-l="How long">Deleted about 7 days after rejection</td></tr>
+            <tr><td>Singer consent record (terms version, time, IP address, hash)</td><td data-l="Where">Our database</td><td data-l="How long">Kept as legal proof, de-identified after account deletion</td></tr>
+            <tr><td>Crash reports</td><td data-l="Where">Sentry</td><td data-l="How long">Per Sentry's retention settings</td></tr>
+          </tbody>
+        </table>
+      </section>
 
-<h2>7. Children's Privacy</h2>
-<p>Mewati Song Player is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will delete it promptly. If you believe a child has provided us with personal information, please contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
+      <section class="card" id="s6">
+        <h2><span class="num">6</span>Data Sharing and Disclosure</h2>
+        <div class="note good"><strong>We do NOT sell, rent, or trade your personal information.</strong></div>
+        <p>We share information only in these limited cases:</p>
+        <ul class="l">
+          <li><strong>Service Providers:</strong> Cloudflare (hosting, database, file storage) and Sentry (crash reporting), which help us run the App.</li>
+          <li><strong>Singers:</strong> If you send a Custom Song Request, the singer you choose receives your name, mobile number and request details.</li>
+          <li><strong>All App users:</strong> A registered singer's name, photo, songs and (in the Custom Song Request list) mobile number are visible to every user of the App.</li>
+          <li><strong>WhatsApp:</strong> Only when you choose to send a request through WhatsApp.</li>
+          <li><strong>Legal Requirements:</strong> When required by law, court order, or government request.</li>
+          <li><strong>Safety:</strong> To protect the rights, property or safety of Mewati Song Player, our users, or the public.</li>
+        </ul>
+      </section>
 
-<h2>8. Your Rights, Choices and Account Deletion</h2>
-<p>You have the following rights:</p>
-<ul>
-  <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
-  <li><strong>Correction:</strong> Request correction of inaccurate information.</li>
-  <li><strong>Deletion:</strong> Request deletion of your personal information.</li>
-  <li><strong>Opt-Out:</strong> You can stop using the App at any time and uninstall it.</li>
-</ul>
+      <section class="card" id="s7">
+        <h2><span class="num">7</span>Children's Privacy</h2>
+        <p>Mewati Song Player is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will delete it promptly. If you believe a child has provided us with personal information, please contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
+      </section>
 
-<h3>8.1 Singers: delete your account inside the App</h3>
-<p>A singer can delete their account at any time: open <strong>Singer Profile</strong>, tap <strong>खाता हटाएं (Delete account)</strong>, and confirm with your PIN. This cannot be undone. When you do this:</p>
-<ul>
-  <li>Your PIN, login sessions and login-attempt records are permanently deleted.</li>
-  <li>Your name is replaced by "Deleted singer", and your bio, profile photo and contact details are erased.</li>
-  <li>Your mobile number is anonymized, so the same number can be used to register again later.</li>
-  <li>You and your songs are removed from public lists, rankings and the Custom Song Request list. Any song of yours still waiting for review is cancelled.</li>
-  <li>Your profile photo and any pending upload files are deleted from our storage immediately. Your songs disappear from the App immediately, and we then delete their audio files from our storage.</li>
-  <li>Your name and mobile number are removed from past Custom Song Requests that were addressed to you.</li>
-</ul>
-<p><strong>What we keep after deletion:</strong> the record that you accepted the Singer Terms (terms version, date and time, IP address and verification hash), kept without your name or mobile number as legal proof; and earnings and listening statistics that carry only an anonymous singer ID and no personal details.</p>
+      <section class="card" id="s8">
+        <h2><span class="num">8</span>Your Rights, Choices and Account Deletion</h2>
+        <p>You have the following rights:</p>
+        <ul class="l">
+          <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+          <li><strong>Correction:</strong> Request correction of inaccurate information.</li>
+          <li><strong>Deletion:</strong> Request deletion of your personal information.</li>
+          <li><strong>Opt-Out:</strong> You can stop using the App at any time and uninstall it.</li>
+        </ul>
 
-<h3>8.2 Listeners and everyone else</h3>
-<p>Because the device ID is anonymous, we cannot look up your data by name. To ask for access or deletion of your data (including a Custom Song Request or feedback you sent), email us from the address you wish to use at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, tell us what you want deleted, and include the mobile number you used (for custom song requests). We may ask for extra details to find your records. Note that deleting your device ID also removes your likes and favorites, since they are tied to it. We aim to reply within 30 days.</p>
+        <div class="panel" id="delete-account">
+          <h3>🗑️ 8.1 Singers: delete your account inside the App</h3>
+          <p>A singer can delete their account at any time: open Singer Profile, tap <strong>खाता हटाएं (Delete account)</strong>, and confirm with your PIN. What happens:</p>
+          <ol class="steps">
+            <li><b>Immediately</b>You are logged out everywhere, and you and your songs disappear from all public lists, rankings and the Custom Song Request list. Any song of yours still waiting for review is cancelled.</li>
+            <li><b>30-day grace period</b>For 30 days we keep your data as it is. If you log in again with the same mobile number and PIN within these 30 days, the deletion is cancelled and your account and songs come back.</li>
+            <li><b>After 30 days without login: permanent deletion</b>This cannot be undone.
+              <ul class="l" style="margin-top:10px">
+                <li>Your PIN, login sessions and login-attempt records are permanently deleted.</li>
+                <li>Your name is replaced by "Deleted singer", and your bio, profile photo and contact details are erased.</li>
+                <li>Your mobile number is anonymized, so the same number can be used to register again later.</li>
+                <li>Your profile photo and any pending upload files are deleted from our storage.</li>
+                <li>Your name and mobile number are removed from past Custom Song Requests that were addressed to you.</li>
+              </ul>
+            </li>
+          </ol>
+          <div class="note"><strong>What we keep after deletion:</strong> the record that you accepted the Singer Terms (terms version, date and time, IP address and verification hash), kept without your name or mobile number as legal proof; and earnings and listening statistics that carry only an anonymous singer ID and no personal details.</div>
+        </div>
 
-<h2>9. Security</h2>
-<p>We take reasonable measures to protect your information, including:</p>
-<ul>
-  <li>Encrypted transmission (HTTPS) for all data sent to our servers</li>
-  <li>Singer PINs stored only as salted hashes, with a temporary lock after repeated wrong attempts</li>
-  <li>Saved login details on your phone kept in Android's encrypted secure storage</li>
-  <li>Restricted access to our database, uploaded files and admin tools</li>
-  <li>Regular security updates to our infrastructure</li>
-</ul>
-<p>However, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+        <h3>8.2 Listeners and everyone else</h3>
+        <p>Because the device ID is anonymous, we cannot look up your data by name. To ask for access or deletion of your data (including a Custom Song Request or feedback you sent), email us from the address you wish to use at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, tell us what you want deleted, and include the mobile number you used (for custom song requests). We may ask for extra details to find your records. Note that deleting your device ID also removes your likes and favorites, since they are tied to it. We aim to reply within 30 days.</p>
+      </section>
 
-<h2>10. Third-Party Services</h2>
-<p>The App uses the following third-party services, each with its own privacy policy:</p>
-<ul>
-  <li><strong>Cloudflare</strong> (hosting, database and file storage): <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></li>
-  <li><strong>Sentry</strong> (crash reporting and performance monitoring): <a href="https://sentry.io/privacy/">sentry.io/privacy</a></li>
-  <li><strong>WhatsApp</strong> (only if you choose to send a Custom Song Request): <a href="https://www.whatsapp.com/legal/privacy-policy">whatsapp.com/legal/privacy-policy</a></li>
-  <li><strong>Android speech recognition</strong> (only for voice search): provided by your phone's speech service, for example Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
-</ul>
-<p>The App does not show advertisements and does not use advertising identifiers.</p>
+      <section class="card" id="s9">
+        <h2><span class="num">9</span>Security</h2>
+        <p>We take reasonable measures to protect your information, including:</p>
+        <ul class="l">
+          <li>Encrypted transmission (HTTPS) for all data sent to our servers</li>
+          <li>Singer PINs stored only as salted hashes, with a temporary lock after repeated wrong attempts</li>
+          <li>Saved login details on your phone kept in Android's encrypted secure storage</li>
+          <li>Restricted access to our database, uploaded files and admin tools</li>
+          <li>Regular security updates to our infrastructure</li>
+        </ul>
+        <p>However, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+      </section>
 
-<h2>11. Content and Copyright</h2>
-<p>Mewati Song Player streams audio content. All song copyrights belong to their respective owners. If you believe your copyright has been infringed, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
+      <section class="card" id="s10">
+        <h2><span class="num">10</span>Third-Party Services</h2>
+        <p>The App uses the following third-party services, each with its own privacy policy:</p>
+        <ul class="l">
+          <li><strong>Cloudflare</strong> (hosting, database and file storage): <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a></li>
+          <li><strong>Sentry</strong> (crash reporting and performance monitoring): <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a></li>
+          <li><strong>WhatsApp</strong> (only if you choose to send a Custom Song Request): <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener">whatsapp.com/legal/privacy-policy</a></li>
+          <li><strong>Android speech recognition</strong> (only for voice search): provided by your phone's speech service, for example Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        </ul>
+        <div class="note good">The App does not show advertisements and does not use advertising identifiers.</div>
+      </section>
 
-<h2>12. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. If we make a major change, such as collecting new kinds of data, we will also try to tell you inside the App. Continued use of the App after changes means you accept the updated policy.</p>
+      <section class="card" id="s11">
+        <h2><span class="num">11</span>Content and Copyright</h2>
+        <p>Mewati Song Player streams audio content. All song copyrights belong to their respective owners. If you believe your copyright has been infringed, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
+      </section>
 
-<h2>13. Contact Us</h2>
-<p>If you have any questions or complaints about this Privacy Policy or how your data is handled, contact us at:</p>
-<p><strong>Email:</strong> <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a></p>
+      <section class="card" id="s12">
+        <h2><span class="num">12</span>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. If we make a major change, such as collecting new kinds of data, we will also try to tell you inside the App. Continued use of the App after changes means you accept the updated policy.</p>
+      </section>
 
-<footer>&copy; 2026 Mewati Song Player. All rights reserved.</footer>
-
+      <section class="card" id="s13">
+        <h2><span class="num">13</span>Contact Us</h2>
+        <p>If you have any questions or complaints about this Privacy Policy or how your data is handled, contact us at:</p>
+        <a class="btn" href="mailto:mewatisongplayer@gmail.com">✉️ mewatisongplayer@gmail.com</a>
+      </section>
+    </div>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap"><b>Mewati Song Player</b> · Made in Mewat 🎶<br>© 2026 Mewati Song Player. All rights reserved.</div>
+</footer>
+
+<button id="top" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),
+      topBtn=document.getElementById('top'),
+      nav=document.getElementById('toc'),
+      links=[].slice.call(document.querySelectorAll('.toc a')),
+      secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+
+  function onScroll(){
+    var h=document.documentElement,
+        max=h.scrollHeight-h.clientHeight,
+        p=max>0?h.scrollTop/max:0;
+    bar.style.transform='scaleX('+Math.min(1,Math.max(0,p))+')';
+    topBtn.classList.toggle('show',h.scrollTop>600);
+    var cur=0;
+    secs.forEach(function(s,i){ if(s.getBoundingClientRect().top<150) cur=i; });
+    links.forEach(function(a,i){ a.classList.toggle('on',i===cur); });
+    if(window.innerWidth<1000 && nav.scrollWidth>nav.clientWidth){
+      nav.scrollTo({left:Math.max(0,links[cur].offsetLeft-24),behavior:'smooth'});
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  onScroll();
+
+  topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+  var cards=document.querySelectorAll('.card');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+      });
+    },{threshold:.06});
+    cards.forEach(function(c){io.observe(c);});
+  }else{
+    cards.forEach(function(c){c.classList.add('in');});
+  }
+})();
+</script>
 </body>
 </html>
