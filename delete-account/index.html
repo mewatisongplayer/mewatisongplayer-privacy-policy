@@ -69,7 +69,6 @@ ul.l{list-style:none;display:grid;gap:10px;margin:8px 0 12px}
 ul.l li{position:relative;padding-left:22px;color:var(--mut)}
 ul.l li::before{content:"";position:absolute;left:2px;top:.7em;width:8px;height:8px;border-radius:50%;background:var(--grad)}
 .note{margin:14px 0;padding:14px 16px;border-radius:16px;border:1px solid var(--line);border-left:4px solid var(--accent);background:rgba(246,185,59,.08);color:var(--tx);font-size:15px}
-.note.good{border-left-color:#35d49a;background:rgba(53,212,154,.09)}
 
 .steps{list-style:none;counter-reset:s;margin:14px 0 4px}
 .steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px;color:var(--mut)}
@@ -137,7 +136,7 @@ footer b{color:var(--tx)}
 
     <h3>What happens next</h3>
     <ul class="l">
-      <li><strong>Immediately:</strong> you are logged out everywhere, and you and your songs disappear from the App, public lists, rankings and the Custom Song Request list.</li>
+      <li><strong>Right away:</strong> you are logged out everywhere and your saved PIN is erased from your phone. Within a few minutes, you and your songs disappear from the App, public lists, rankings and the Custom Song Request list.</li>
       <li><strong>30-day grace period:</strong> for 30 days we keep your data as it is. If you log in again with the same mobile number and PIN within these 30 days, the deletion is cancelled and your account and songs come back.</li>
       <li><strong>After 30 days without login:</strong> your data is permanently deleted or anonymized, as listed in <a href="#kept">Section 4</a>. This cannot be undone.</li>
     </ul>
@@ -163,15 +162,17 @@ footer b{color:var(--tx)}
     <table class="tbl">
       <thead><tr><th>Data</th><th>What happens</th></tr></thead>
       <tbody>
-        <tr><td>Singer login sessions</td><td data-l="What happens">Closed immediately when the singer deletes the account</td></tr>
-        <tr><td>Singer's songs</td><td data-l="What happens">Removed from the App, public lists and rankings immediately</td></tr>
+        <tr><td>Singer login sessions</td><td data-l="What happens">Deleted immediately when the singer deletes the account</td></tr>
+        <tr><td>Saved PIN on the singer's phone</td><td data-l="What happens">Erased from the phone immediately</td></tr>
+        <tr><td>Singer's songs in the App</td><td data-l="What happens">Removed from the App, public lists and rankings within a few minutes</td></tr>
+        <tr><td>Singer's song audio files and cover images in our storage</td><td data-l="What happens">Not deleted automatically. The singer can ask us by email to remove them, as described in the Singer Terms</td></tr>
         <tr><td>Singer PIN and login-attempt records</td><td data-l="What happens">Permanently deleted after the 30-day grace period</td></tr>
         <tr><td>Singer name, bio, contact details</td><td data-l="What happens">Erased after the grace period. Name is replaced with "Deleted singer"</td></tr>
         <tr><td>Singer mobile number</td><td data-l="What happens">Anonymized after the grace period, so the same number can register again later</td></tr>
         <tr><td>Singer profile photo and pending upload files</td><td data-l="What happens">Deleted from our storage after the grace period. Songs waiting for review are cancelled</td></tr>
-        <tr><td>Your name and mobile number in Custom Song Requests addressed to a deleted singer</td><td data-l="What happens">Removed after the grace period</td></tr>
+        <tr><td>The singer's own name and mobile number in Custom Song Requests addressed to that singer</td><td data-l="What happens">Removed after the grace period. The requesting listener's details are covered by the listener rows below</td></tr>
         <tr><td>Listener device ID, likes and favorites</td><td data-l="What happens">Deleted on request. Your likes and favorites are lost with it</td></tr>
-        <tr><td>Custom Song Requests and feedback you sent</td><td data-l="What happens">Deleted on request</td></tr>
+        <tr><td>Custom Song Requests and feedback you sent as a listener</td><td data-l="What happens">Deleted on request</td></tr>
         <tr><td>Record that a singer accepted the Singer Terms (terms version, date and time, IP address, verification hash)</td><td data-l="What happens"><strong>Kept</strong>, without name or mobile number, as legal proof of consent</td></tr>
         <tr><td>Earnings and listening statistics</td><td data-l="What happens"><strong>Kept</strong> with only an anonymous ID and no personal details, for accounting</td></tr>
         <tr><td>Live listening sessions and short-term counters</td><td data-l="What happens">Deleted automatically (about 90 days and about 1 day respectively)</td></tr>
