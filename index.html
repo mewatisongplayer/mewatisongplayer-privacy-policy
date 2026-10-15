@@ -205,7 +205,7 @@ footer b{color:var(--tx)}
 
         <h3>2.2 Information you provide</h3>
         <ul class="l">
-          <li><strong>Feedback and Suggestions:</strong> If you send feedback, we store your message, the category you pick, the song (if any) you refer to, and your device ID. Please do not include sensitive personal details in the message.</li>
+          <li><strong>Feedback, Suggestions and Song Reports:</strong> If you send feedback or report a song (for example a copyright complaint), we store your message, the category you pick, the song (if any) you refer to, and your device ID. You may also add a phone number or email address so that we can reply; this is optional and is stored with your report. To limit spam, we also store a one-way hash of your IP address with the report. The hash cannot be turned back into your IP address, and it is cleared automatically after about 7 days. Please do not include sensitive personal details in the message.</li>
           <li><strong>Custom Song Request ("अपना गाना भरवाएँ"):</strong> If you use this feature, we collect your name, mobile number, the singer you choose, the requested song length, and any shayari or lyrics you type. We store this on our servers and the App then opens WhatsApp on your phone with a prefilled message to the chosen singer. The message is sent only if you press send in WhatsApp, and WhatsApp's own privacy policy applies to it. The singer will see your name, mobile number and request.</li>
           <li><strong>Voice Search:</strong> If you use voice search, the App uses the microphone and your phone's built-in Android speech recognition service. We do not record, receive or store your voice. Depending on your phone, the speech recognition provider (for example Google) may process audio under its own privacy policy.</li>
         </ul>
@@ -245,7 +245,7 @@ footer b{color:var(--tx)}
           <li>Processing singer registrations, reviewing uploaded songs, and running singer accounts</li>
           <li>Calculating and reporting singer earnings</li>
           <li>Passing custom song requests to the singer you chose</li>
-          <li>Replying to your feedback</li>
+          <li>Reviewing and replying to your feedback and song reports, including copyright complaints</li>
           <li>Preventing fraud, abuse, spam and unauthorized access</li>
           <li>Fixing crashes and bugs</li>
           <li>Complying with legal obligations</li>
@@ -262,7 +262,8 @@ footer b{color:var(--tx)}
             <tr><td>Live listening sessions (IP address, approximate location, song)</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically about 90 days after last activity</td></tr>
             <tr><td>Short-term play counters</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically after about 1 day</td></tr>
             <tr><td>Listening-time records (device ID, song, seconds, country, region)</td><td data-l="Where">Our database</td><td data-l="How long">Kept as long as needed to calculate singer earnings and for accounting records</td></tr>
-            <tr><td>Feedback</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to improve the App, or until you ask for deletion</td></tr>
+            <tr><td>Feedback and song reports (message, category, song, optional phone or email, device ID)</td><td data-l="Where">Our database</td><td data-l="How long">Kept while the report is open. Resolved reports are deleted automatically about 1 year after they are resolved, or earlier if you ask for deletion</td></tr>
+            <tr><td>Anti-spam hash of your IP address (on feedback and reports)</td><td data-l="Where">Our database</td><td data-l="How long">Cleared automatically after about 7 days</td></tr>
             <tr><td>Custom song requests (name, mobile, lyrics)</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to resolve the request, or until you ask for deletion</td></tr>
             <tr><td>Singer profile, PIN hash, photo</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Until the singer deletes the account and the 30-day grace period ends (<a href="#s8">Section 8</a>)</td></tr>
             <tr><td>Singer's songs (audio files and cover images)</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Hidden from the App when the singer deletes the account. The audio files are not deleted automatically; see <a href="#s8">Section 8.1</a></td></tr>
@@ -306,7 +307,7 @@ footer b{color:var(--tx)}
 
         <div class="panel" id="delete-account">
           <h3>🗑️ 8.1 Singers: delete your account inside the App</h3>
-          <p>A singer can delete their account at any time: open Singer Profile, tap <strong>खाता हटाएं (Delete account)</strong>, and confirm with your PIN. What happens:</p>
+          <p>A singer can delete their account at any time: open Singer Profile and log in, tap the red <strong>delete</strong> icon at the top right of the screen (<strong>अकाउंट डिलीट करें</strong>), and confirm with your PIN. What happens:</p>
           <ol class="steps">
             <li><b>Right away</b>You are logged out everywhere and your saved PIN is erased from your phone. Within a few minutes, you and your songs disappear from the App, public lists, rankings and the Custom Song Request list.</li>
             <li><b>30-day grace period</b>For 30 days we keep your data as it is. If you log in again with the same mobile number and PIN within these 30 days, the deletion is cancelled and your account and songs come back.</li>
@@ -325,7 +326,7 @@ footer b{color:var(--tx)}
         </div>
 
         <h3>8.2 Listeners and everyone else</h3>
-        <p>Because the device ID is anonymous, we cannot look up your data by name. To ask for access or deletion of your data (including a Custom Song Request or feedback you sent), email us from the address you wish to use at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, tell us what you want deleted, and include the mobile number you used (for custom song requests). We may ask for extra details to find your records. Note that deleting your device ID also removes your likes and favorites, since they are tied to it. We aim to reply within 30 days.</p>
+        <p>Because the device ID is anonymous, we cannot look up your data by name. To ask for access or deletion of your data (including a Custom Song Request, feedback or a song report you sent), email us from the address you wish to use at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, tell us what you want deleted, and include the mobile number you used (for custom song requests) or the phone number or email you gave (for feedback or reports). We may ask for extra details to find your records. Note that deleting your device ID also removes your likes and favorites, since they are tied to it. We aim to reply within 30 days.</p>
       </section>
 
       <section class="card" id="s9">
@@ -355,7 +356,7 @@ footer b{color:var(--tx)}
 
       <section class="card" id="s11">
         <h2><span class="num">11</span>Content and Copyright</h2>
-        <p>Mewati Song Player streams audio content. All song copyrights belong to their respective owners. If you believe your copyright has been infringed, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>.</p>
+        <p>Mewati Song Player streams audio content. All song copyrights belong to their respective owners. If you believe your copyright has been infringed, contact us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, or use the report option inside the App.</p>
       </section>
 
       <section class="card" id="s12">
