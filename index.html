@@ -264,7 +264,8 @@ footer b{color:var(--tx)}
             <tr><td>Listening-time records (device ID, song, seconds, country, region)</td><td data-l="Where">Our database</td><td data-l="How long">Kept as long as needed to calculate singer earnings and for accounting records</td></tr>
             <tr><td>Feedback</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to improve the App, or until you ask for deletion</td></tr>
             <tr><td>Custom song requests (name, mobile, lyrics)</td><td data-l="Where">Our database</td><td data-l="How long">Until no longer needed to resolve the request, or until you ask for deletion</td></tr>
-            <tr><td>Singer profile, PIN hash, songs, photo</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Until the singer deletes the account (<a href="#s8">Section 8</a>)</td></tr>
+            <tr><td>Singer profile, PIN hash, photo</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Until the singer deletes the account and the 30-day grace period ends (<a href="#s8">Section 8</a>)</td></tr>
+            <tr><td>Singer's songs (audio files and cover images)</td><td data-l="Where">Our database and R2 storage</td><td data-l="How long">Hidden from the App when the singer deletes the account. The audio files are not deleted automatically; see <a href="#s8">Section 8.1</a></td></tr>
             <tr><td>Singer login sessions and failed-login counters</td><td data-l="Where">Our database</td><td data-l="How long">Deleted automatically soon after they expire (counters after about 1 day)</td></tr>
             <tr><td>Files of rejected song uploads</td><td data-l="Where">R2 storage</td><td data-l="How long">Deleted about 7 days after rejection</td></tr>
             <tr><td>Singer consent record (terms version, time, IP address, hash)</td><td data-l="Where">Our database</td><td data-l="How long">Kept as legal proof, de-identified after account deletion</td></tr>
@@ -301,24 +302,26 @@ footer b{color:var(--tx)}
           <li><strong>Deletion:</strong> Request deletion of your personal information.</li>
           <li><strong>Opt-Out:</strong> You can stop using the App at any time and uninstall it.</li>
         </ul>
+        <a class="btn" href="https://mewatisongplayer.github.io/mewatisongplayer-privacy-policy/delete-account/">🗑️ Open the account deletion page</a>
 
         <div class="panel" id="delete-account">
           <h3>🗑️ 8.1 Singers: delete your account inside the App</h3>
           <p>A singer can delete their account at any time: open Singer Profile, tap <strong>खाता हटाएं (Delete account)</strong>, and confirm with your PIN. What happens:</p>
           <ol class="steps">
-            <li><b>Immediately</b>You are logged out everywhere, and you and your songs disappear from all public lists, rankings and the Custom Song Request list. Any song of yours still waiting for review is cancelled.</li>
+            <li><b>Right away</b>You are logged out everywhere and your saved PIN is erased from your phone. Within a few minutes, you and your songs disappear from the App, public lists, rankings and the Custom Song Request list.</li>
             <li><b>30-day grace period</b>For 30 days we keep your data as it is. If you log in again with the same mobile number and PIN within these 30 days, the deletion is cancelled and your account and songs come back.</li>
             <li><b>After 30 days without login: permanent deletion</b>This cannot be undone.
               <ul class="l" style="margin-top:10px">
-                <li>Your PIN, login sessions and login-attempt records are permanently deleted.</li>
+                <li>Your PIN and login-attempt records are permanently deleted.</li>
                 <li>Your name is replaced by "Deleted singer", and your bio, profile photo and contact details are erased.</li>
                 <li>Your mobile number is anonymized, so the same number can be used to register again later.</li>
-                <li>Your profile photo and any pending upload files are deleted from our storage.</li>
-                <li>Your name and mobile number are removed from past Custom Song Requests that were addressed to you.</li>
+                <li>Your profile photo and any pending upload files are deleted from our storage, and any song of yours still waiting for review is cancelled.</li>
+                <li>Your name and mobile number (as the singer) are removed from Custom Song Requests addressed to you. The details of the listener who sent a request are not changed by this; they are deleted on request (see Section 8.2).</li>
               </ul>
             </li>
           </ol>
           <div class="note"><strong>What we keep after deletion:</strong> the record that you accepted the Singer Terms (terms version, date and time, IP address and verification hash), kept without your name or mobile number as legal proof; and earnings and listening statistics that carry only an anonymous singer ID and no personal details.</div>
+          <div class="note"><strong>Your songs:</strong> they are removed from the App as described above, but their audio files are not deleted automatically from our storage. To have the files removed as well, email us at <a href="mailto:mewatisongplayer@gmail.com">mewatisongplayer@gmail.com</a>, as described in the Singer Terms.</div>
         </div>
 
         <h3>8.2 Listeners and everyone else</h3>
